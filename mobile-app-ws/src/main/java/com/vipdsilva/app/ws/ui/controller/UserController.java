@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.vipdsilva.app.ws.exceptions.UserServiceException;
 import com.vipdsilva.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.vipdsilva.app.ws.ui.model.response.UserRest;
 
@@ -39,6 +40,9 @@ public class UserController {
 	
 	@GetMapping(path = "/{userId}")
 	public ResponseEntity<UserRest> getUser(@PathVariable String userId) {
+		
+		if(true) throw new UserServiceException("Usuário não localizado.");
+		
 		UserRest usuario = new UserRest();
 		usuario.setFirstName("Vinicius");
 		usuario.setLastName("Pessoa da Silva");
