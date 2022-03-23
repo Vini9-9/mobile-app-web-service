@@ -1,13 +1,12 @@
 package com.vipdsilva.app.ws.ui.model.response;
 
-import java.util.UUID;
 
 public class UserRest {
 
 	private String firstName;
 	private String lastName;
 	private String email;
-	private UUID userId;
+	private String userId;
 
 	public String getFirstName() {
 		return firstName;
@@ -33,11 +32,11 @@ public class UserRest {
 		this.email = email;
 	}
 
-	public UUID getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(UUID uuid) {
+	public void setUserId(String uuid) {
 		this.userId = uuid;
 	}
 }
